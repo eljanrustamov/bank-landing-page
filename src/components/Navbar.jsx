@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="w-full flex justify-between items-center py-6 navbar">
       <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
 
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="sm:flex hidden list-none justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -24,7 +24,7 @@ const Navbar = () => {
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
-          src={isMenuShow ? menu : close}
+          src={isMenuShow ? close : menu}
           alt="menu"
           className="w-[28px] h-[28px] object-contain cursor-pointer"
           onClick={() => setIsMenuShow((prev) => !prev)}
